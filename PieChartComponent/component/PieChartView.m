@@ -48,30 +48,31 @@ typedef enum {
 }
 
 - (void)layoutSubviews {
-    [self setFrame:CGRectMake(10, 40, 120, 120)];
+    [self setFrame:CGRectMake(10, 40, 180, 180)];
 }
 
 - (void)awakeFromNib{
     [super awakeFromNib];
 
-//    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
-//    [self addGestureRecognizer:tapRecognizer];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    [self addGestureRecognizer:tapRecognizer];
 
 }
 
 #pragma mark - Actions
 -(void)viewTapped:(UITapGestureRecognizer *)gesture{
-//    CGPoint point = [gesture locationInView:self];
-//    
-//    if ([self calculateDistanceFromCenter:point] <= 20) {
-//        return;
-//    }
-//    
-//    //Set the point into the right coordinates
-//    point = CGPointMake(point.x-self.frame.size.width/2, (self.frame.size.height/2)-point.y);
-//    CGFloat angle = [self radiansFromPoint:point];
-//    PieChartItem *item = [self itemForAngleInRadians:angle];
-//    self.configuration.selectedItem = item;
+    CGPoint point = [gesture locationInView:self];
+    
+    if ([self calculateDistanceFromCenter:point] <= 20) {
+        return;
+    }
+    //Set the point into the right coordinates
+    point = CGPointMake(point.x-self.frame.size.width/2, (self.frame.size.height/2)-point.y);
+    CGFloat angle = [self radiansFromPoint:point];
+    PieChartItem *item = [self itemForAngleInRadians:angle];
+    self.selectedItem = item;
+    if (_didSelectItem)
+        _didSelectItem(item);
 }
 
 - (float) calculateDistanceFromCenter:(CGPoint)point {

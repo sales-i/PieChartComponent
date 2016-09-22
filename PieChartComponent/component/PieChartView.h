@@ -13,5 +13,5 @@
 
 @property (nonatomic, strong) PieChartConfiguration* configuration;
 @property(nonatomic,strong) PieChartItem* selectedItem;
-
+@property (nonatomic, strong) void(^didSelectItem)(PieChartItem *item);
 @end
