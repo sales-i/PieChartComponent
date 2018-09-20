@@ -26,7 +26,6 @@
 		E03188B11D940FB500ABAC2B /* PieChartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5C9F21BBF256400191C6B /* PieChartItem.m */; };
 		E03188B31D940FB500ABAC2B /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5C9F41BBF256400191C6B /* PieChartView.m */; };
 		E03188B71D9411D900ABAC2B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E03188B51D9411D900ABAC2B /* Info.plist */; };
-		E03188B81D9411D900ABAC2B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E03188B51D9411D900ABAC2B /* Info.plist */; };
 		E03188BA1D94128600ABAC2B /* PieChartConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA5C9EF1BBF256400191C6B /* PieChartConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E03188BB1D94128800ABAC2B /* PieChartItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA5C9F11BBF256400191C6B /* PieChartItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E03188BC1D94128C00ABAC2B /* PieChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA5C9F31BBF256400191C6B /* PieChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -361,7 +360,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E03188B81D9411D900ABAC2B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +672,7 @@
 				E03188AD1D940FAA00ABAC2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
